@@ -2,196 +2,212 @@ TERMINAL COMMAND LIST (MAC)
 -----------------------------------------------------------
 
 
-pwd
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+DIRECTORY RELATED COMMANDS
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 -----------------------------------------------------------
+pwd
 CURRENT WORKING DIRECTORY
 
 
-cd [directory]
 -----------------------------------------------------------
+cd [directory]
 CHANGE DIRECTORY TO [directory]
 
 
-cd
 -----------------------------------------------------------
+cd
 GO BACK TO ROOT DIRECTORY
 
 
-cd -
 -----------------------------------------------------------
+cd -
 GO BACK 1 LEVEL AND RETURNS THE PATH
 
 
-cd ..
 -----------------------------------------------------------
+cd ..
 GO BACK 1 LEVEL
 
 
-cd ../../
 -----------------------------------------------------------
+cd ../../
 GO BACK 2 LEVELS
 
 
-cd s
 -----------------------------------------------------------
+cd s
 SHOWS ALL DIRECTORIES STARTING WITH ’S’
 
 
-ls
 -----------------------------------------------------------
+ls
 LIST DIRECTORY CONTENTS
 
 
-ls -a
 -----------------------------------------------------------
+ls -a
 LISTING INCL. HIDDEN FILES
 
 
-ls -l
 -----------------------------------------------------------
+ls -l
 LONG LISTING
 
 
-ls -la
 -----------------------------------------------------------
+ls -la
 LONG LISTING AND HIDDEN FILES
 
 
-ls -lh
 -----------------------------------------------------------
+ls -lh
 LONG LISTING WITH HUMAN READABLE FILE SIZES
 
 
-ls -R
 -----------------------------------------------------------
+ls -R
 ENTIRE CONTENT OF FOLDER RECURSIVELY
 
 
-mkdir
 -----------------------------------------------------------
+mkdir
 CREATE NEW DIRECTORY
 
 
-mkdir [name] && cd [name]
 -----------------------------------------------------------
+mkdir [name] && cd [name]
 MAKE DIR AND MOVE INTO IT
 
 
-mkdir -p [dir]/[dir]
 -----------------------------------------------------------
+mkdir -p [dir]/[dir]
 CREATE NEW DIRECTORY
 
 
-rm -R [dir]
 -----------------------------------------------------------
+rm -R [dir]
 REMOVE A DIRECTORY (ONLY EMPTY)
 
 
-rmdir [dir]
 -----------------------------------------------------------
+rmdir [dir]
 REMOVE A DIRECTORY AND ITS CONTENTS
 
 
-history n
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+BASIC UTILITIES
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 -----------------------------------------------------------
+man &UTIL
+MANUAL GETS INFO FOR HOW TO USE ANY UTILITY
+
+
+-----------------------------------------------------------
+less [file name]
+MANUAL GETS INFO FOR HOW TO USE ANY UTILITY
+
+
+-----------------------------------------------------------
+history n
 SHOWS STUFF TYPED LIMITED TO LAST n ITEMS
 
 
-touch [file name]
 -----------------------------------------------------------
+touch [file name]
 CREATE A NEW FILE
 
 
-cat
 -----------------------------------------------------------
+cat
 CONCATENATE TO SCREEN
 
 
-rm -r [file name]
 -----------------------------------------------------------
+rm -r [file name]
 REMOVE FILE
 
 
-rm -rf [file name]
 -----------------------------------------------------------
+rm -rf [file name]
 FORCEFULLY REMOVE *CAUTION*
 
 
-mv [file name] [dir name]
 -----------------------------------------------------------
+mv [file name] [dir name]
 MOVES A FILE INTO A DIR
 
 
-mv [file name] [new file name]
 -----------------------------------------------------------
+mv [file name] [new file name]
 RENAME A FILE
 
 
-pbcopy < [file name]
 -----------------------------------------------------------
+pbcopy < [file name]
 COPIES FILE CONTENTS TO CLIPBOARD
 
 
-clear
 -----------------------------------------------------------
+clear
 CLEARS THE SCREEN KEEPING HISTORY ABOVE
 
 
-command + k
 -----------------------------------------------------------
+command + k
 CLEARS THE SCREEN DELETES HISTORY ABOVE
 
 
-ctrl + c
 -----------------------------------------------------------
+ctrl + c
 KILLS WHATEVER YOU’RE RUNNING
 
 
-cp [source] [destination]
 -----------------------------------------------------------
+cp [source] [destination]
 COPY FILE FROM SOURCE TO DESTINATION
 
 
-open [file name]
 -----------------------------------------------------------
+open [file name]
 OPENS A FILE
 
 
-top
 -----------------------------------------------------------
+top
 DISPLAYS ACTIVE PROCESSES (q to quit)
 
 
-vim [file name]
 -----------------------------------------------------------
+vim [file name]
 OPENS THE FIE USING VIM EDITOR
 
 
-find [dir] -name [search_pattern]
 -----------------------------------------------------------
+find [dir] -name [search_pattern]
 SEARCH FOR FILES. find /Users -name “file.txt.”
 
 
-grep [search_pattern] [file name]
 -----------------------------------------------------------
+grep [search_pattern] [file name]
 SEARCH ALL LINES FOR SEARCH PATTERN.  grep “Brett” file.txt
 
 
-grep -r [search_pattern] [dir]
 -----------------------------------------------------------
+grep -r [search_pattern] [dir]
 RECURSIVE SEARCH ALL FILES IN A DIR FOR SEARCH PATTERN
 
 
-grep -v [search_pattern] [file]
 -----------------------------------------------------------
+grep -v [search_pattern] [file]
 SEARCH ALL LINES THAT DO NOT CONTAIN SEARCH PATTERN
 
 
-mdfind [search_pattern]
 -----------------------------------------------------------
+mdfind [search_pattern]
 SPOTLIGHT SEARCH FOR FILES(NAMES, CONTENT, METADATA, ETC)
 
 
-mdfind -onlyin [dir] -name [pattern]
 -----------------------------------------------------------
+mdfind -onlyin [dir] -name [pattern]
 SPOTLIGHT SEARCH FOR FILES NAMED LIKE PATTERN IN A DIR
