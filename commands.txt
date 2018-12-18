@@ -3,12 +3,11 @@ TERMINAL COMMAND LIST (MAC)
 -----------------------------------------------------------
 
 
-<<<<<<< HEAD
-=======
 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 DIRECTORY RELATED COMMANDS
 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
->>>>>>> 65d8b19ab610ce5f11012937c3db7e04dd6dedce
+
+
 -----------------------------------------------------------
 pwd
 CURRENT WORKING DIRECTORY
@@ -40,13 +39,8 @@ GO BACK 2 LEVELS
 
 
 -----------------------------------------------------------
-<<<<<<< HEAD
 ls -d i*
 SHOWS ALL DIRECTORIES STARTING WITH ’i’ (case sensitive)
-=======
-cd s
-SHOWS ALL DIRECTORIES STARTING WITH ’S’
->>>>>>> 65d8b19ab610ce5f11012937c3db7e04dd6dedce
 
 
 -----------------------------------------------------------
@@ -56,7 +50,7 @@ LIST DIRECTORY CONTENTS
 
 -----------------------------------------------------------
 ls -a
-LISTING INCL. HIDDEN FILES
+LISTING INCLUDING HIDDEN FILES
 
 
 -----------------------------------------------------------
@@ -76,11 +70,7 @@ LONG LISTING WITH HUMAN READABLE FILE SIZES
 
 -----------------------------------------------------------
 ls -R
-<<<<<<< HEAD
 ENTIRE CONTENTS OF DIR RECURSIVELY (DIR AND DIR CONTENTS)
-=======
-ENTIRE CONTENT OF FOLDER RECURSIVELY
->>>>>>> 65d8b19ab610ce5f11012937c3db7e04dd6dedce
 
 
 -----------------------------------------------------------
@@ -108,8 +98,6 @@ rmdir [dir]
 REMOVE A DIRECTORY AND ITS CONTENTS
 
 
-<<<<<<< HEAD
-=======
 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 BASIC UTILITIES
 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
@@ -123,7 +111,6 @@ less [file name]
 MANUAL GETS INFO FOR HOW TO USE ANY UTILITY
 
 
->>>>>>> 65d8b19ab610ce5f11012937c3db7e04dd6dedce
 -----------------------------------------------------------
 history n
 SHOWS STUFF TYPED LIMITED TO LAST n ITEMS
