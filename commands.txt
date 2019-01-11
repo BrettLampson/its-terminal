@@ -1,10 +1,5 @@
 -----------------------------------------------------------
-TERMINAL COMMAND LIST (MAC)
------------------------------------------------------------
-
-
-
-
+TERMINAL COMMANDS (MAC)
 -----------------------------------------------------------
 -----------------------------------------------------------
 -----------------------------------------------------------
@@ -42,28 +37,24 @@ GO BACK 2 LEVELS
 
 
 -----------------------------------------------------------
-ls -d i*
-SHOWS ALL DIRECTORIES STARTING WITH ’i’ (case sensitive)
-
-
------------------------------------------------------------
 ls
 LIST DIRECTORY CONTENTS
 
 
 -----------------------------------------------------------
+ls -1
+LIST DIRECTORY CONTENTS IN LIST FORM
+(USEFUL FOR PASTING INTO EXCEL OR JUST PRINTING)
+
+
+-----------------------------------------------------------
 ls -a
-LISTING INCLUDING HIDDEN FILES
+LISTING SHOWING HIDDEN FILES
 
 
 -----------------------------------------------------------
-ls -l
-LONG LISTING
-
-
------------------------------------------------------------
-ls -la
-LONG LISTING AND HIDDEN FILES
+ls -F
+LISTING THAT SHOWS WHICH ARE FILES VS. FOLDERS ENDING '/'
 
 
 -----------------------------------------------------------
@@ -72,8 +63,18 @@ LONG LISTING WITH HUMAN READABLE FILE SIZES
 
 
 -----------------------------------------------------------
+ls -s
+LONG LISTING WITH FILE SIZES (in bytes)
+
+
+-----------------------------------------------------------
 ls -R
 ENTIRE CONTENTS OF DIR RECURSIVELY (DIR AND DIR CONTENTS)
+
+
+-----------------------------------------------------------
+ls -d i*
+SHOWS ALL DIRECTORIES STARTING WITH ’i’ (case sensitive)
 
 
 -----------------------------------------------------------
@@ -123,8 +124,8 @@ MANUAL GETS INFO FOR HOW TO USE ANY UTILITY
 
 
 -----------------------------------------------------------
-less [file name]
-MANUAL GETS INFO FOR HOW TO USE ANY UTILITY
+less [options] [file name]
+
 
 
 -----------------------------------------------------------
@@ -138,8 +139,8 @@ CREATE A NEW FILE
 
 
 -----------------------------------------------------------
-cat
-CONCATENATE TO SCREEN
+cat [file name]
+FILE CONTENTS TO SCREEN
 
 
 -----------------------------------------------------------
@@ -203,30 +204,111 @@ OPENS THE FIE USING VIM EDITOR
 
 
 -----------------------------------------------------------
-find [dir] -name [search_pattern]
+find [dir] -name ['search_pattern']
 SEARCH FOR FILES. find /Users -name “file.txt.”
-
-
------------------------------------------------------------
-grep [search_pattern] [file name]
-SEARCH ALL LINES FOR SEARCH PATTERN.  grep “Brett” file.txt
-
-
------------------------------------------------------------
-grep -r [search_pattern] [dir]
-RECURSIVE SEARCH ALL FILES IN A DIR FOR SEARCH PATTERN
-
-
------------------------------------------------------------
-grep -v [search_pattern] [file]
-SEARCH ALL LINES THAT DO NOT CONTAIN SEARCH PATTERN
-
-
------------------------------------------------------------
-mdfind [search_pattern]
-SPOTLIGHT SEARCH FOR FILES(NAMES, CONTENT, METADATA, ETC)
 
 
 -----------------------------------------------------------
 mdfind -onlyin [dir] -name [pattern]
 SPOTLIGHT SEARCH FOR FILES NAMED LIKE PATTERN IN A DIR
+
+
+-----------------------------------------------------------
+-----------------------------------------------------------
+-----------------------------------------------------------
+GREP COMMANDS
+-----------------------------------------------------------
+-----------------------------------------------------------
+-----------------------------------------------------------
+grep command (GLOBAL REGULAR EXPRESSION PRINT)
+SEARCH SPECIFIC TEXT WITHIN FILES ON OUR SYSTEM
+
+
+-----------------------------------------------------------
+grep 'oogabooga' things.txt
+SEARCH ALL LINES FOR 'oogabooga' WITHIN things.txt
+
+
+-----------------------------------------------------------
+grep --color=always 'oogabooga' things.txt
+SEARCH ALL LINES FOR 'oogabooga' AND HIGHLIGHT THEM
+
+
+-----------------------------------------------------------
+grep -r 'oogabooga' [dir]
+RECURSIVE SEARCH ALL FILES IN A DIR FOR SEARCH PATTERN
+
+
+-----------------------------------------------------------
+grep -v 'oogabooga' things.txt
+SEARCH ALL LINES THAT DO NOT CONTAIN SEARCH PATTERN
+
+
+-----------------------------------------------------------
+SEARCH FOR ALL OCCURRENCES OF SPECIFIC TEXT WITHIN A FILE
+grep 'oogabooga' things.txt  (case sensitive)
+
+oogabooga
+oogaboogathing
+
+
+-----------------------------------------------------------
+SEARCH FOR ANY OCCURRENCE OF SPECIFIC TEXT WITHIN A FILE
+grep -i 'oogabooga' things.txt  (-i means NOT case sensitive)
+
+oogabooga
+oogabooga
+
+
+-----------------------------------------------------------
+SEARCH ANY CASE, EXACT MATCH OF SPECIFIC TEXT WITHIN A FILE
+grep -iw 'oogabooga' things.txt  (-w means whole words)
+
+oogabooga
+
+
+-----------------------------------------------------------
+SEARCH FOR EXACT MATCH OF SPECIFIC TEXT WITHIN A FILE
+grep -win 'oogabooga' things.txt  (-n return line number)
+
+51: oogabooga
+431: oogabooga
+
+
+-----------------------------------------------------------
+SEARCH FOR EXACT MATCH OF SPECIFIC TEXT WITHIN A FILE
+grep -win -B 4 'oogabooga' things.txt
+(-B 4 means 4 lines before each match)
+
+
+-----------------------------------------------------------
+SEARCH FOR EXACT MATCH OF SPECIFIC TEXT WITHIN A FILE
+grep -win -A 4 'oogabooga' things.txt
+(-B 4 means 4 lines after each match)
+
+
+-----------------------------------------------------------
+SEARCH FOR EXACT MATCH OF SPECIFIC TEXT WITHIN A FILE
+grep -win -C 4 'oogabooga' things.txt
+(-C means 4 lines before AND after each match)
+
+
+-----------------------------------------------------------
+SEARCH FOR EXACT MATCH OF SPECIFIC TEXT WITHIN ALL files in directory
+grep -win 'oogabooga' ./*
+
+
+-----------------------------------------------------------
+SEARCH FOR EXACT MATCH OF SPECIFIC TEXT WITHIN ALL text files in directory
+grep -win 'oogabooga' ./*.txt
+
+
+-----------------------------------------------------------
+SEARCH FOR EXACT MATCH OF SPECIFIC TEXT WITHIN ALL directories and subdirectories
+grep -winr 'oogabooga' .  (-r means recursive search will search dirs and subdirs)
+can take a LONG time to search, so you might need to kill the search
+
+
+-----------------------------------------------------------
+SEARCH FOR EXACT MATCH OF SPECIFIC TEXT WITHIN ALL text files in directory
+grep -l 'oogabooga' . (-l print only the things of files with matching text)
