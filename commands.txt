@@ -49,7 +49,7 @@ LIST DIRECTORY CONTENTS IN LIST FORM
 
 -----------------------------------------------------------
 ls -a
-LISTING SHOWING HIDDEN FILES
+LISTING INCLUDING HIDDEN FILES
 
 
 -----------------------------------------------------------
@@ -125,7 +125,7 @@ MANUAL GETS INFO FOR HOW TO USE ANY UTILITY
 
 -----------------------------------------------------------
 less [options] [file name]
-
+MANUAL GETS INFO FOR HOW TO USE ANY UTILITY
 
 
 -----------------------------------------------------------
@@ -205,7 +205,8 @@ OPENS THE FIE USING VIM EDITOR
 
 -----------------------------------------------------------
 find [dir] -name ['search_pattern']
-SEARCH FOR FILES. find /Users -name “file.txt.”
+find /Users -name “file.txt.”
+SEARCH FOR FILES. 
 
 
 -----------------------------------------------------------
@@ -220,7 +221,7 @@ GREP COMMANDS
 -----------------------------------------------------------
 -----------------------------------------------------------
 -----------------------------------------------------------
-grep command (GLOBAL REGULAR EXPRESSION PRINT)
+GREP (GLOBAL REGULAR EXPRESSION PRINT)
 SEARCH SPECIFIC TEXT WITHIN FILES ON OUR SYSTEM
 
 
@@ -231,7 +232,7 @@ SEARCH ALL LINES FOR 'oogabooga' WITHIN things.txt
 
 -----------------------------------------------------------
 grep --color=always 'oogabooga' things.txt
-SEARCH ALL LINES FOR 'oogabooga' AND HIGHLIGHT THEM
+same as above AND HIGHLIGHT THEM
 
 
 -----------------------------------------------------------
@@ -245,45 +246,47 @@ SEARCH ALL LINES THAT DO NOT CONTAIN SEARCH PATTERN
 
 
 -----------------------------------------------------------
-SEARCH FOR ALL OCCURRENCES OF SPECIFIC TEXT WITHIN A FILE
 grep 'oogabooga' things.txt  (case sensitive)
+SEARCH FOR ALL OCCURRENCES OF SPECIFIC TEXT WITHIN A FILE
 
 oogabooga
 oogaboogathing
 
 
 -----------------------------------------------------------
-SEARCH FOR ANY OCCURRENCE OF SPECIFIC TEXT WITHIN A FILE
 grep -i 'oogabooga' things.txt  (-i means NOT case sensitive)
+SEARCH FOR ANY OCCURRENCE OF SPECIFIC TEXT WITHIN A FILE
 
 oogabooga
 oogabooga
 
 
 -----------------------------------------------------------
-SEARCH ANY CASE, EXACT MATCH OF SPECIFIC TEXT WITHIN A FILE
 grep -iw 'oogabooga' things.txt  (-w means whole words)
+SEARCH ANY CASE, EXACT MATCH OF SPECIFIC TEXT WITHIN A FILE
 
 oogabooga
 
 
 -----------------------------------------------------------
-SEARCH FOR EXACT MATCH OF SPECIFIC TEXT WITHIN A FILE
 grep -win 'oogabooga' things.txt  (-n return line number)
+SEARCH FOR EXACT MATCH OF SPECIFIC TEXT WITHIN A FILE
 
 51: oogabooga
 431: oogabooga
 
 
 -----------------------------------------------------------
-SEARCH FOR EXACT MATCH OF SPECIFIC TEXT WITHIN A FILE
 grep -win -B 4 'oogabooga' things.txt
+SEARCH FOR EXACT MATCH OF SPECIFIC TEXT WITHIN A FILE
+
 (-B 4 means 4 lines before each match)
 
 
 -----------------------------------------------------------
-SEARCH FOR EXACT MATCH OF SPECIFIC TEXT WITHIN A FILE
 grep -win -A 4 'oogabooga' things.txt
+SEARCH FOR EXACT MATCH OF SPECIFIC TEXT WITHIN A FILE
+
 (-B 4 means 4 lines after each match)
 
 
