@@ -119,6 +119,9 @@ BASIC UTILITIES
 -----------------------------------------------------------
 -----------------------------------------------------------
 -----------------------------------------------------------
+
+
+-----------------------------------------------------------
 man &UTIL
 MANUAL GETS INFO FOR HOW TO USE ANY UTILITY
 
@@ -221,13 +224,22 @@ GREP COMMANDS
 -----------------------------------------------------------
 -----------------------------------------------------------
 -----------------------------------------------------------
+
+
+-----------------------------------------------------------
 GREP (GLOBAL REGULAR EXPRESSION PRINT)
-SEARCH SPECIFIC TEXT WITHIN FILES ON OUR SYSTEM
+SEARCH SPECIFIC TEXT WITHIN FILES ON YOUR SYSTEM
 
 
 -----------------------------------------------------------
 grep 'oogabooga' things.txt
 SEARCH ALL LINES FOR 'oogabooga' WITHIN things.txt
+RETURNS LINES MATCHING 'oogabooga' (not case sensitive)
+
+
+-----------------------------------------------------------
+grep -i 'oogabooga' things.txt  (-i means NOT case sensitive)
+SEARCH FOR ANY OCCURRENCE OF SPECIFIC TEXT WITHIN A FILE
 
 
 -----------------------------------------------------------
@@ -236,29 +248,13 @@ same as above AND HIGHLIGHT THEM
 
 
 -----------------------------------------------------------
-grep -r 'oogabooga' [dir]
+grep -r 'oogabooga' /Brett/Documents
 RECURSIVE SEARCH ALL FILES IN A DIR FOR SEARCH PATTERN
 
 
 -----------------------------------------------------------
 grep -v 'oogabooga' things.txt
 SEARCH ALL LINES THAT DO NOT CONTAIN SEARCH PATTERN
-
-
------------------------------------------------------------
-grep 'oogabooga' things.txt  (case sensitive)
-SEARCH FOR ALL OCCURRENCES OF SPECIFIC TEXT WITHIN A FILE
-
-oogabooga
-oogaboogathing
-
-
------------------------------------------------------------
-grep -i 'oogabooga' things.txt  (-i means NOT case sensitive)
-SEARCH FOR ANY OCCURRENCE OF SPECIFIC TEXT WITHIN A FILE
-
-oogabooga
-oogabooga
 
 
 -----------------------------------------------------------
